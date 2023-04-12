@@ -1,0 +1,76 @@
+<div class="main">
+    <div class="leftpannel">
+        <app-sidebar></app-sidebar>
+    </div>
+
+    <div class="rightpannel">
+        <div class="head1">
+            <div class="subhead">
+                <h1 class="msg">Upload News</h1>
+                <img src=".\assets\uploadnews\news.png" alt="logo"><br>
+            </div>
+        </div>
+        <div class="conatiner">
+            <form [formGroup]="uploadnews">
+                <div class="field1">
+                    <div class="section">
+                        <label>Enter Section ID</label><br>
+                        <input class="secinput" type="text" formControlName="sectionId">
+                        <p class="alertmsg" *ngIf="(uploadnews.controls['sectionId'].touched || uploadnews.controls['sectionId'].dirty) && uploadnews.controls['sectionId'].invalid">
+                            Section ID required !
+                        </p>
+                    </div>
+                    <div class="section">
+                        <label>Enter Video URL</label><br>
+                        <input class="secinput" type="text" formControlName="videourl">
+                    </div>
+                    <div class="section">
+                        <button class="uploadbtn" [disabled]="!uploadnews.valid" (click)="add()" >UPLOAD</button>
+                    </div>
+                </div>
+                <div class="field1">
+                    <div class="section">
+                        <label>Enter Content</label><br>
+                        <textarea class="coninput" formControlName="content"></textarea>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="head1">
+            <div class="subhead">
+                <h1 class="msg">Uplaod Image</h1>
+                <img src=".\assets\uploadnews\newsimage.png" alt="logo"><br>
+            </div>
+        </div>
+        <div class="conatiner">
+            <form [formGroup]="uploadImage">
+                <div class="field1">
+                    <div class="section">
+                        <label>Enter Image URL</label><br>
+                        <input class="secinput" type="url" formControlName="imgUrl">
+                        <p class="alertmsg" *ngIf="(uploadImage.controls['imgUrl'].touched || uploadImage.controls['imgUrl'].dirty) && uploadImage.controls['imgUrl'].invalid">
+                            Image URL required !
+                        </p>
+                    </div>
+                    <div class="section">
+                        <label>Enter News ID</label><br>
+                        <input class="secinput" type="text" formControlName="newsId">
+                        <p class="alertmsg" *ngIf="(uploadImage.controls['newsId'].touched || uploadImage.controls['newsId'].dirty) && uploadImage.controls['newsId'].invalid">
+                           News Id required !
+                        </p>
+                    </div>
+                    <div class="section">
+                        <label>Enter Section ID</label><br>
+                        <input class="secinput" type="text" formControlName="sectionId">
+                        <p class="alertmsg" *ngIf="(uploadImage.controls['newsId'].touched || uploadImage.controls['newsId'].dirty) && uploadImage.controls['newsId'].invalid">
+                           Section Id required !
+                        </p>
+                    </div>
+                    <div class="section">
+                        <button class="uploadbtn" [disabled]="!uploadImage.valid" (click)="addImage()" >UPLOAD</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

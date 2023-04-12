@@ -1,0 +1,42 @@
+<div class="main">
+    <div class="leftpannel">
+        <app-sidebar></app-sidebar>
+    </div>
+
+    <div class="rightpannel">
+        <div class="head1">
+            <div class="subhead">
+                <h1 class="msg">Up News</h1>
+                <img src=".\assets\up_news\upnews.png" alt="logo"><br>
+            </div>  
+        </div>
+        <div class="table">
+            <div class="table_section">
+                <table >
+                    <thead>
+                        <tr>
+                            <th>Section Id</th>
+                            <th>News Id</th>                   
+                            <th>Content</th>                   
+                            <th>Created On</th>
+                            <th>Modified On</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor = "let c of upNews, let i = index">
+                            <td>{{c.sectionId}}</td>
+                            <td>{{c.newsId}}</td>
+                            <td>{{c.content}}</td>
+                            <td>{{c.createdOn}}</td>
+                            <td>{{c.modifiedOn}}</td>
+                            <td>
+                                <button (click)="edit(c)">Edit</button>
+                                <button>Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            
+    </div>
+</div>

@@ -1,0 +1,127 @@
+.main {
+    width: 100vw;
+    height: 100vh;
+    background-color: #ECECEC;
+    display: flex;
+}
+
+.leftpannel {
+    width: 15%;
+    height: 95%;
+    margin: auto;
+    float: left;
+    background: #FFFFFF;
+    box-shadow: inset 4px 4px 4px 3px rgba(138, 128, 128, 0.25);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.rightpannel {
+    width: 82%;
+    height: 90%;
+    margin: auto;
+    float: left;
+    background: #C5C5C5;
+    border-radius: 20px;
+}
+.head1 {
+    width: 100%;
+    display: inline-block;
+    height: auto;
+}
+.subhead {
+    width: 73%;
+    height: auto;
+    display: flex;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.msg {
+    width: auto;
+    height: auto;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2vw;
+    line-height: 45px;
+    color: #000000;
+}
+img {
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+    margin-top: 3px;
+}
+
+.table{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top:30px;
+}
+
+
+table{
+    width: 100%;
+    table-layout:fixed;
+    min-width: 1000px;
+  }
+  .table_header{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 20px;
+    background-color: rgba(240, 240,240);
+  }
+  .table_header p {
+    color: #000000;
+  }
+  button{
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  td button:nth-child(1){
+    background-color: #0298cf;
+  }
+  td button:nth-child(2){
+    background-color: #f80000;
+  }
+
+  .viewinput{
+    padding: 10px 20px;
+    margin: 1 10px;
+    outline: none;
+    border: 1px solid #0298cf;
+    border-radius: 6px;
+    color: #0298cf;
+  }
+  .table_section{
+    height: 650px;
+    overflow: auto;
+    background-color: white;
+  }
+  
+  thead th{
+    position: sticky;
+    top: 0;
+    background-color: #f6f9fc;
+    color: #8493a5;
+    font-size: 15px;
+  }
+  th,td{
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 20px;
+    word-break: break-all;
+    text-align: center;
+   color: #000000;
+  }
+  tr:hover td{
+    color: #0298cf;
+    cursor: pointer;
+    background-color: #f6f9fc;
+  }
